@@ -324,7 +324,8 @@ export function LeaderboardPage() {
               return (
                 <Link
                   key={user.githubUsername}
-                  to={`/users/${user.githubUsername}`}
+                  to="/users/$username"
+                  params={{ username: user.githubUsername }}
                   className={`flex flex-col items-center gap-2 rounded-2xl p-4 transition-all hover:scale-[1.02] ${bgColor} ${isCenter ? 'row-start-1 -mt-2' : ''}`}
                 >
                   <RankBadge rank={rank} />
@@ -365,7 +366,8 @@ export function LeaderboardPage() {
           return (
             <Link
               key={user.githubUsername}
-              to={`/users/${user.githubUsername}`}
+              to="/users/$username"
+              params={{ username: user.githubUsername }}
               className="group flex items-center gap-3 rounded-2xl bg-neutral-900/60 p-3.5 transition-colors hover:bg-neutral-800/80"
             >
               <RankBadge rank={rank} />

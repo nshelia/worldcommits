@@ -12,7 +12,7 @@ export function PostCard({ item, isLast }: { item: TimelinePostItem; isLast?: bo
     <article className="relative flex gap-4 pb-8">
       {/* Timeline connector */}
       <div className="flex flex-col items-center">
-        <Link to={`/users/${post.githubUsername}`}>
+        <Link to="/users/$username" params={{ username: post.githubUsername }}>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -63,7 +63,8 @@ export function PostCard({ item, isLast }: { item: TimelinePostItem; isLast?: bo
       <div className="min-w-0 flex-1 pt-1">
         <div className="flex items-center gap-2">
           <Link
-            to={`/users/${post.githubUsername}`}
+            to="/users/$username"
+            params={{ username: post.githubUsername }}
             className="text-[14px] font-semibold text-white hover:underline"
           >
             {post.githubUsername}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Copy, Check, Terminal, Zap, Users, Globe } from 'lucide-react'
 import { Link } from '@tanstack/react-router'
 import { ApiKeyPanel } from '~/components/account/api-key-panel'
@@ -230,7 +230,7 @@ function WindsurfSetup() {
   )
 }
 
-const CLIENT_SETUP: Record<Client, () => JSX.Element> = {
+const CLIENT_SETUP: Record<Client, () => React.JSX.Element> = {
   cursor: CursorSetup,
   'claude-code': ClaudeCodeSetup,
   vscode: VSCodeSetup,

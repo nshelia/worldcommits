@@ -123,7 +123,7 @@ function Header() {
 
           {!isLoading && isAuthenticated && viewer && (
             <div className="flex items-center gap-2">
-              <Link to={`/users/${viewer.githubUsername}`} className="flex items-center gap-2 rounded-xl px-2 py-1 transition-colors hover:bg-neutral-800">
+              <Link to="/users/$username" params={{ username: viewer.githubUsername! }} className="flex items-center gap-2 rounded-xl px-2 py-1 transition-colors hover:bg-neutral-800">
                 <Avatar size="sm">
                   <AvatarImage
                     src={`https://github.com/${viewer.githubUsername}.png`}
