@@ -1,0 +1,3 @@
+MCP_SHARED_SECRET="replace-with-a-long-random-string"
+CONVEX_SITE_URL="https://your-deployment.convex.site"
+CONVEX_INGEST_TOKEN="replace-with-convex-ingest-token"
